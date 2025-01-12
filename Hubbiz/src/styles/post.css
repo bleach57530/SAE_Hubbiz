@@ -1,0 +1,211 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.header h1 {
+    font-size: 22px;
+    margin: 0;
+}
+
+/* Post Card */
+.post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.post-card .post-content {
+    font-size: 16px;
+
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.post-header {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 26px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.post-content {
+    font-size: 16px; /* Taille de la police */
+    color: #444; /* Couleur du texte */
+    margin-bottom: 20px; /* Espacement en dessous */
+    word-wrap: break-word; /* Coupe les mots trop longs pour éviter les débordements */
+    overflow: hidden; /* Masque le contenu qui dépasse */
+    text-overflow: ellipsis; /* Ajoute "..." à la fin si le texte est tronqué */
+    display: -webkit-box; /* Active un comportement de boîte flexible */
+    -webkit-line-clamp: 3; /* Limite le contenu à 3 lignes */
+  
+}
+
+
+.post-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.vote-count {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Comments Section */
+.comments-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #007bff;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.comment-content {
+    font-size: 15px;
+    color: #555;
+}
+
+.comment-date {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Add Comment Section */
+.new-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.new-comment textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+.new-comment button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.new-comment button:hover {
+    background-color: #0056b3;
+}
+
+.post-footer {
+    display: flex;
+    flex-direction: column; /* Organise les éléments en colonne */
+    gap: 10px; /* Ajoute un espacement vertical entre les sections */
+}
+
+.top-section {
+    display: flex; /* Aligne les boutons horizontalement */
+    align-items: center; /* Aligne verticalement au centre */
+    gap: 10px; /* Ajoute un espacement entre les boutons */
+}
+
+#new-comment {
+    margin-top: 10px;
+    width: 100%; /* S'étend sur toute la largeur du conteneur */
+}
+
+#add-comment-button {
+    align-self: flex-end; /* Place le bouton à droite (optionnel) */
+}

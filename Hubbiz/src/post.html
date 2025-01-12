@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Post</title>
+    <link rel="stylesheet" href="../src/styles/post.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button id="backButton" class="back-button">◀ Retour</button>
+            <h1>Détails du Post</h1>
+        </header>
+        <main class="post-container">
+            <div class="post-card">
+                <div class="post-header">
+                    <div class="post-author">Posté par <span class="author">Auteur</span></div> 
+                    <div class="post-date">Il y a ...</div>
+                </div>
+                <div class="post-body">
+                    <h2 class="post-title">Titre du Post</h2>
+                    <p class="post-content">Voici le contenu détaillé du post avec toutes les informations nécessaires.</p>
+                </div>
+                <div class="post-footer">
+                    <div class="top-section">
+                        <button class="vote-button upvote">▲</button>
+                        <span class="vote-count">0</span>
+                        <button class="vote-button downvote">▼</button>
+                        <button class="comment-button">💬 0 commentaires</button>
+                        <button id="shareButton" class="btn-share">Partager ce post</button>
+                    </div>
+                    <textarea id="new-comment" placeholder="Écrire un commentaire..."></textarea>
+                    <button id="add-comment-button">Ajouter un commentaire</button>
+                </div>
+                
+            </div>
+            <div class="comment-section">
+                <h3>Commentaires <span id="comment-count">0</span></h3>
+                <ul id="comments-list">
+                    <!-- Les commentaires seront ajoutés ici -->
+                </ul>
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="../controleur/post.js" type="module"></script>
+</body>
+</html>
