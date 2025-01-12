@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter un Post</title>
+  <link rel="stylesheet" href="../src/styles/ajouter.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ajouter un Nouveau Post</h1>
+    </header>
+    <main>
+      <form id="add-post-form">
+        <label for="post-title">Titre :</label>
+        <input type="text" id="post-title" name="title" required maxlength="255">
+
+        <label for="post-content">Contenu :</label>
+        <textarea id="post-content" name="content" rows="5" required></textarea>
+
+        <!-- Image Upload -->
+        <label for="post-image">Ajouter une Image (facultatif) :</label>
+        <input type="file" id="post-image" name="image" accept="image/*">
+
+        <label for="post-expires-at">Expiration (facultatif) :</label>
+        <input type="datetime-local" id="post-expires-at" name="expires_at">
+
+        <div class="buttons">
+          <button type="submit">Publier</button>
+          <button class="back-button" type="button" onclick="window.history.back();">Retour</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="../controleur/ajouter.js" type="module"></script>
+</body>
+</html>
