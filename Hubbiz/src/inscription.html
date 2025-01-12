@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="../src/styles/inscription.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inscription</h1>
+        <form id="inscriptionForm">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="birthdate">Date de naissance :</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="genre">Genre :</label>
+            <select id="genre" name="genre" required>
+                <option value="" disabled selected>-- Sélectionnez votre genre --</option>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+                <option value="autre">Autre</option>
+            </select>
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+    <script type = "module" src="../controleur/inscription.js"></script>
+</body>
+</html>
