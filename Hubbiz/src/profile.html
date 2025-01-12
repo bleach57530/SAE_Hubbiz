@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/styles/profile.css">
+</head>
+<body>
+    <!-- Bouton Retour -->
+    <button id="backButton" class="btn-back-outside">Retour</button>
+
+    <div class="profile-container">
+        <!-- Bannière -->
+        <div class="profile-banner" style="background-image: url('../src/styles/sakura.webp'); height: 200px;" id="profileBanner">
+            <button class="btn-change-banner">Changer la bannière</button>
+            <input type="file" id="bannerInput" style="display: none;" accept="image/*">
+        </div>
+
+        <!-- Photo de profil -->
+        <div class="profile-photo">
+            <img src="../src/styles/logo.webp" alt="Photo de profil" id="profileImage">
+        </div>
+
+        <!-- Div contenant le bouton "Changer la photo" en dessous -->
+        <div class="btn-container">
+            <button class="btn-change-photo">Changer la photo</button>
+            <input type="file" id="photoInput" style="display: none;" accept="image/*">
+        </div>
+
+        <!-- Informations utilisateur -->
+        <div class="profile-info">
+            <h1 id="firstName">Nom utilisateur</h1>
+            <p id="email">mail</p>
+        </div>
+
+        <!-- Informations supplémentaires -->
+        <div class="additional-info">
+            <p>Date de création : <span id="accountCreationDate">Non défini</span></p>
+            <p>Date de naissance : <span id="birthDate">Non défini</span></p>
+            <p>Nombre de posts : <span id="postCount">0</span></p>
+        </div>
+
+        <!-- Section des posts récents -->
+        <div class="recent-posts">
+            <h2>Les plus récents posts</h2>
+            <ul id="postsList">
+                <li>Chargement des posts...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../controleur/profile.js" type="module"></script>
+</body>
+</html>
