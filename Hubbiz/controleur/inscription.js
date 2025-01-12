@@ -50,3 +50,21 @@ document.getElementById("inscriptionForm").addEventListener("submit", async func
                 params: [nextId, username, email, password, "user", createdAt, genre, birthdate],
             }),
         });
+
+        if (!addUserResponse.ok) {
+            throw new Error("Erreur lors de l'inscription de l'utilisateur.");
+        }
+
+        const addUserResult = await addUserResponse.json();
+
+        if (addUserResult.message === "Requête exécutée avec succès") {
+            alert("Inscription réussie !");
+            window.location.href = "login.html"; // Redirection vers la page de connexion
+        } else {
+            alert("Une erreur est survenue lors de l'inscription.");
+        }
+    } catch (error) {
+        console.error("Erreur lors de l'inscription :", error);
+        alert("Une erreur est survenue. Veuillez réessayer.");
+    }
+});
