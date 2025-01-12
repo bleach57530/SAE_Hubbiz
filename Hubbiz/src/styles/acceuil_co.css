@@ -1,0 +1,221 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f7f9fc;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: linear-gradient(145deg, #ffffff, #e3e8ee);
+  border-radius: 25px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+/* Logo */
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+}
+
+.logo-placeholder img {
+  width: 100px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.tabs .tab {
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #0079d3;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tabs .tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background-color: #0056a3;
+}
+
+/* Profile Button */
+.profile-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background-color: #218838;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 20px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Post Container */
+.post {
+  display: flex;
+  flex-direction: column; /* Assure que les enfants s'empilent verticalement */
+  align-items: flex-start; /* Aligne les éléments sur le côté gauche */
+  background: linear-gradient(145deg, #ffffff, #e3e8ee);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Post Content */
+.post-content {
+  display: inline-block;
+  position: relative;
+  max-width: 400px; /* Ajustez la largeur en fonction de votre design */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Ajoute "..." à la fin si le texte dépasse */
+}
+
+.post-content .fade-effect {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px; /* Ajustez la largeur de la zone floue */
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f7f9fc);
+  pointer-events: none; /* Empêche les interactions sur l'effet */
+}
+
+
+.post img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.post h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.post p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.post .meta {
+  font-size: 12px;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Add Post Button */
+.add-post-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #0079d3;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-post-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background-color: #0056a3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .tabs {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+  }
+
+  .profile-btn {
+      align-self: center;
+  }
+
+  .post {
+      width: 90%;
+  }
+}
