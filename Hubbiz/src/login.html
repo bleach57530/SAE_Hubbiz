@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion</title>
+  <link rel="stylesheet" href="../src/styles/login.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Connexion</h1>
+    </header>
+    <main>
+      <div class="form-wrapper">
+        <form id="login-form">
+          <label for="username">Nom d'utilisateur :</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Mot de passe :</label>
+          <input type="password" id="password" name="password"required>
+          <p class="signup-link">
+            Vous n'avez pas encore de compte ? 
+            <a href="inscription.html">Inscrivez-vous ici</a>.
+          </p>
+          
+          <button type="button" id="loginButton">Se connecter</button>
+        </form>
+        <p id="login-message" style="color: red;"></p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Inclusion du script corrigé -->
+  <script type="module" src="../controleur/login.js"></script>
+</body>
+</html>
