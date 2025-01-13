@@ -53,4 +53,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const checkData = await checkResponse.json();
 
-   
+      // Si aucune correspondance trouvée dans la base de données
+      if (!Array.isArray(checkData) || checkData.length === 0) {
+        emailMessage.textContent = 'L\'e-mail ou le mot de passe est incorrect.';
+        emailMessage.className = 'message error';
+        return;
+      }
+
+      // Succès de la connexion
+      emailMessage.textContent = 'Connexion réussie !';
+      emailMessage.className = 'message success';
+
+      // 2) Envoyer l'e-mail via sendmail.php
+      const formData = new FormData();
+      formData.append('email', emailValue);
+
+      const mailResponse = await fetch(SENDMAIL_URL, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!mailResponse.ok) {
+        throw new Error(`Erreur HTTP envoi mail : ${mailResponse.status}`);
+      }
+
+      const mailData = await mailResponse.json();
+      if (mailData.success) {
+        // Succès : l'e-mail a été envoyé
+        emailMessage.textContent = `Un e-mail de réinitialisation a été envoyé à ${emailValue}.`;
+        emailMessage.className = 'message success';
+      } else {
+        // Erreur du côté de sendmail
+        emailMessage.textContent = mailData.error || 'Erreur lors de l\'envoi du mail.';
+        emailMessage.className = 'message error';
+      }
+    } catch (error) {
+      console.error(error);
+      emailMessage.textContent = "Une erreur s'est produite.";
+      emailMessage.className = 'message error';
+    }
+  });
+});
